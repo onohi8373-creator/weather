@@ -1,0 +1,182 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    /* Default Weather Background */
+    background:
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("https://images.unsplash.com/photo-1534088568595-a066f410bcda");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 750px;
+
+    background: rgba(255,255,255,0.2);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.container > p {
+    margin-bottom: 25px;
+}
+
+/* Country Dropdown */
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+/* Search Box */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 15px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #0077ff;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #0055bb;
+}
+
+/* Weather Information */
+
+.weather-info {
+    padding: 20px;
+}
+
+.weather-icon {
+    font-size: 60px;
+    margin: 15px;
+}
+
+.weather-info h1 {
+    font-size: 55px;
+    margin: 15px;
+}
+
+/* Forecast Section */
+
+.forecast-title {
+    margin: 20px 0;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.day {
+    background: rgba(255,255,255,0.2);
+
+    padding: 15px 10px;
+
+    border-radius: 12px;
+
+    flex: 1;
+}
+
+.day h2 {
+    margin: 15px 0;
+}
+
+/* Mobile Screen */
+
+@media (max-width: 600px) {
+
+    .forecast {
+        flex-wrap: wrap;
+    }
+
+    .day {
+        min-width: 28%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .search-box button {
+        padding: 12px;
+    }
+}
